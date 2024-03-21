@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <center>
+        <Script>
+            flag=0
+
+            function check(){
+                if(flag==1)
+                    smile();
+                else
+                    sad();
+            }
+
+
+            function smile()
+            {
+            var a= document.getElementById("canvas");
+            var b=a.getContext("2d");
+
+            b.beginPath();
+            b.arc(145,150,105,Math.PI*2,0);
+            b.stroke();
+            b.fillStyle="yellow";
+            b.fill();
+            b.closePath();
+
+            b.beginPath();
+            b.arc(100,125,12,Math.PI*2,0);
+            b.stroke();
+            b.fillStyle="black"
+            b.fill();
+            b.closePath();
+
+            
+            b.beginPath();
+            b.arc(190,125,12,Math.PI*2,0);
+            b.stroke();
+            b.fillStyle="black"
+            b.fill();
+            b.closePath();
+
+
+            b.beginPath();
+            b.arc(145,177,50,0,Math.PI);
+            b.stroke();
+            b.closePath();
+
+
+            b.beginPath();
+            b.moveTo(155,160);
+            b.bezierCurveTo(130,190,145,85,140,145);
+            b.stroke();
+            b.closePath();
+            flag=0
+            }
+            
+
+
+
+
+            
+            function sad()
+            {
+            var a= document.getElementById("canvas");
+            var b=a.getContext("2d");
+
+            b.beginPath();
+            b.arc(145,150,105,Math.PI*2,0);
+            b.stroke();
+            b.fillStyle="yellow";
+            b.fill();
+            b.closePath();
+
+            b.beginPath();
+            b.arc(100,125,12,Math.PI*2,0);
+            b.stroke();
+            b.fillStyle="black"
+            b.fill();
+            b.closePath();
+
+            
+            b.beginPath();
+            b.arc(190,125,12,Math.PI*2,0);
+            b.stroke();
+            b.fillStyle="black"
+            b.fill();
+            b.closePath();
+
+
+            b.beginPath();
+            b.arc(147,226,50,Math.PI,0);
+            b.stroke();
+            b.closePath();
+            flag=1
+
+            b.beginPath();
+            b.moveTo(155,160);
+            b.bezierCurveTo(130,190,145,85,140,145);
+            b.stroke();
+            b.closePath();
+            }
+        </Script>
+        
+        </center>
+        <style>
+            body{
+                background-color: black;
+            }
+            canvas{
+                border: 1px solid black;
+                background-color: black;
+                border-radius: 10px;
+                margin-left: 12px;
+
+            }
+
+            button{
+                margin: 20px;
+                align-items: center;
+                padding: 7px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background-color: transparent;
+                border-radius: 10px;
+                width: 125px;
+                height: 40px;
+                transition: linear 0.4s;
+                border: 2px solid rgb(255, 255, 255);
+                font-size: small;
+            }
+
+            button:hover{
+                width: 140px;
+                height: 45px;
+                background-color: rgb(255, 255, 119);
+                font-style: italic;
+
+            }
+        </style>
+    </head>
+    <body onload="smile();">
+        <center>
+        <h1 style="color: aliceblue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 2px; font-style: italic;">Smile change Mood </h1>
+        <canvas id="canvas" width="300" height="300" >Changing the mood</canvas>
+        <br>
+        
+        <button onclick="check();">Change Mood</button>
+    <h4 style="color: aliceblue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 2px;">^^</h4>
+    <h6 style="color: aliceblue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 0px;">Click Above to change the Mood</h6>
+</center>
+    </body>
+</html>
