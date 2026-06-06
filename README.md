@@ -21,7 +21,17 @@ A curious developer who loves coding and building things.
 
 ---
 
+## 🛠 Tech Stack
+
+- Languages: Python, JavaScript, C
+- Frontend: HTML, CSS, React
+- Backend: Node.js, Express.js
+- Database: MongoDB, MySQL
+- Tools: Git, GitHub, Docker
+
 ## ⚡ Philosophy
+
+---
 
 ```javascript
 while (alive) {
